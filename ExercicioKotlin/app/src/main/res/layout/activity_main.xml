@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/ETDistancia"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:hint="Distância"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/TVDescDistancia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total de Kilometros"
+        app:layout_constraintStart_toStartOf="@+id/ETDistancia"
+        app:layout_constraintTop_toBottomOf="@+id/ETDistancia" />
+
+    <EditText
+        android:id="@+id/ETPreco"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:hint="Preço"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVDescDistancia"/>
+
+    <TextView
+        android:id="@+id/TVDescPreco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preço por litro"
+        app:layout_constraintStart_toStartOf="@+id/ETPreco"
+        app:layout_constraintTop_toBottomOf="@+id/ETPreco" />
+
+    <EditText
+        android:id="@+id/ETAutonomia"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:hint="Autonomia"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVDescPreco"/>
+
+    <TextView
+        android:id="@+id/TVDescAutonomia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Km por litro"
+        app:layout_constraintStart_toStartOf="@+id/ETAutonomia"
+        app:layout_constraintTop_toBottomOf="@+id/ETAutonomia" />
+
+    <TextView
+        android:id="@+id/txtGastoTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seu gasto total será de:"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TVValorResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="R$ 0"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/txtGastoTotal"
+        app:layout_constraintStart_toStartOf="@+id/txtGastoTotal"
+        app:layout_constraintEnd_toEndOf="@+id/txtGastoTotal"/>
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:text="CALCULAR"
+        app:layout_constraintTop_toBottomOf="@+id/TVValorResultado"
+        app:layout_constraintStart_toStartOf="@+id/TVValorResultado"
+        app:layout_constraintEnd_toEndOf="@+id/TVValorResultado"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
